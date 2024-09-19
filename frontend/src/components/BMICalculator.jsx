@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { toast } from "react-toastify";
 
 const BMICalculator = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [gender, setGender] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [bmi, setBmi] = useState("");
 
   const calculateBMI = (e) => {

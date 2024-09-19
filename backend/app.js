@@ -10,7 +10,7 @@ config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin:'http://localhost:3000',
     methods: ["POST"],
     credentials: true,
   })
@@ -31,7 +31,7 @@ router.post("/send/mail", async (req, res, next) => {
   }
   try {
     await sendEmail({
-      email: "merndeveloper4@gmail.com",
+      email: "vinaysaibandla@gmail.com",
       subject: "GYM WEBSITE CONTACT",
       message,
       userEmail: email,
@@ -50,6 +50,6 @@ router.post("/send/mail", async (req, res, next) => {
 
 app.use(router);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening at port ${process.env.PORT}`);
+app.listen(4000, () => {
+  console.log(`Server listening at port 4000`);
 });
